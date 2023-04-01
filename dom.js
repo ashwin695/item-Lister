@@ -18,3 +18,10 @@ for(var i = 0; i < items.length; i++)
 {
     items[i].style.backgroundColor = "green"
 }
+
+var item = document.querySelector('.list-group-item:nth-child(2)')
+item.style.backgroundColor = "green"
+item.style.color = "white"
+
+var thirdItem = document.querySelector('.list-group-item:nth-child(3)')
+thirdItem.style.visibility = "hidden"
