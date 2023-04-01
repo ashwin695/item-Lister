@@ -13,3 +13,8 @@ item3.style.backgroundColor = "green"
 item3.style.color = "#fff"
 
 items.style.fontWeight = "800"
+
+for(var i = 0; i < items.length; i++)
+{
+    items[i].style.backgroundColor = "green"
+}
