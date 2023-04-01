@@ -15,25 +15,45 @@ function addItem(e){
 
   // Get input value
   var newItem = document.getElementById('item').value;
+  var newDescription = document.getElementById('desc1').value;
 
   // Create new li element
   var li = document.createElement('li');
   // Add class
   li.className = 'list-group-item';
+
+  // Create new span element for item name
+  var itemName = document.createElement('span');
   // Add text node with input value
-  li.appendChild(document.createTextNode(newItem));
+  itemName.appendChild(document.createTextNode(newItem));
+  // Append span to li
+  li.appendChild(itemName);
+
+  //Create new span element for item desc
+  var itemDesc = document.createElement('span');
+  // Add class
+  itemDesc.className = 'ml-2 text-muted';
+  // Add text node with input value
+  itemDesc.appendChild(document.createTextNode(newDescription));
+  // Append span to li
+  li.appendChild(itemDesc);
+
 
   // Create del button element
   var deleteBtn = document.createElement('button');
+  var editBtn = document.createElement('button');
 
   // Add classes to del button
   deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+  editBtn.className = 'btn btn-primary btn-sm float-right mr-2 edit';
 
   // Append text node
-  deleteBtn.appendChild(document.createTextNode('X'));
+  deleteBtn.appendChild(document.createTextNode('Delete'));
+  editBtn.appendChild(document.createTextNode('Edit'));
 
   // Append button to li
   li.appendChild(deleteBtn);
+  li.appendChild(editBtn);
 
   // Append li to list
   itemList.appendChild(li);
